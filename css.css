@@ -1,0 +1,109 @@
+ .mybox {
+     display: block;
+     width: 70%;
+
+     height: auto;
+     margin-top: 116px;
+     margin-right: auto;
+     margin-left: auto;
+     overflow: hidden;
+ }
+
+
+ .image-container {
+
+     position: relative;
+     width: 100%;
+     border: 1px solid black;
+     text-align: center;
+     overflow: hidden;
+ }
+
+ .dragbar .bar1 {
+     position: absolute;
+     top: 10px;
+     left: 160px;
+     width: 100%;
+ }
+
+ .dragbar .bar1 input {
+     width: 60%;
+ }
+
+
+ .dragbar .bar2 {
+     position: absolute;
+     left: 16px;
+     top: 44px;
+     height: 100%;
+ }
+
+ .dragbar .bar2 input {
+     height: 60%;
+ }
+
+ .select-img {
+     position: absolute;
+     width: 100%;
+     top: 30%;
+     text-align: center;
+ }
+
+ .my-text-btn {
+     border: 2px solid white;
+     padding: 13px;
+
+     margin-left: -20%;
+
+     text-align: center;
+ }
+
+ .urlbox {
+     border: 1px solid black;
+     background: white;
+     padding: 20px;
+     width: 60%;
+     margin: 0 auto;
+ }
+
+ input[type=range][orient=vertical] {
+     writing-mode: bt-lr;
+     /* IE */
+     -webkit-appearance: slider-vertical;
+     /* WebKit */
+     width: 8px;
+
+     padding: 0 5px;
+ }
+
+ .bounce-enter-active {
+     animation: bounce-in .5s;
+ }
+
+ .bounce-leave-active {
+     animation: bounce-out .5s;
+ }
+
+ @keyframes bounce-in {
+     0% {
+         transform: scale(0);
+     }
+     50% {
+         transform: scale(1.5);
+     }
+     100% {
+         transform: scale(1);
+     }
+ }
+
+ @keyframes bounce-out {
+     0% {
+         transform: scale(1);
+     }
+     50% {
+         transform: scale(1.5);
+     }
+     100% {
+         transform: scale(0);
+     }
+ }

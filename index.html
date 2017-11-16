@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="./css.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.js " type="text/javascript"></script>
+    <script src="./bbb.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="adjust-bar" class="dragbar">
+        <div class="bar1">
+            <p>{{ message1 }}</p>
+            <input type="range" v-model="message1" min="-51" max="80" value="1">
+        </div>
+        <div class="bar2">
+            <p>{{ message2 }}</p>
+            <input orient="vertical" type="range" v-model="message2" min="-51" max="160" value="1">
+        </div>
+    </div>
+    <div class="mybox">
+        <div class="image-container">
+            <div id="change-img" class="select-img">
+                <h2 class="my-text-btn" v-if="show" v-on:click="show = !show">
+                Select a image  
+            </h2>
+                <transition name="bounce">
+                    <div v-if="!show" class="urlbox">
+                        <input type="file" v-model="myfile" id="File" accept="image/png,image/jpg,image/jpeg,image/gif">
+                        <button v-on:click="updateimg">
+                            Apply new image
+                        </button>
+                        <p>{{imageurl}}</p>
+                    </div>
+                </transition>
+            </div>
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+</body>
+
+</html>
